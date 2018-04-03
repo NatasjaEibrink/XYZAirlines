@@ -27,7 +27,31 @@
     </tfoot>
 </table>
 
-<button id="addButton">Add Flight</button>
+
+<div class="modal fade" id="addFlightModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-title">Add a Flight</h3>
+            </div>
+            <div class="modal-body">
+                <h5>Input Flight Number: </h5><input type="text" name="flightNumber" id="flightNumber"><br>
+                <h5>Input Current Destination: </h5><select name="currentDestination" id="currentDestination">
+                <h5>Input Fuel Level: </h5><select name="fuelLevel" id="fuelLevel">
+                <option value="Amsterdam">Amsterdam</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Paris">Paris</option>
+                <option value="Brussel">Brussel</option>
+                <option value="Kopenhagen">Kopenhagen</option>
+            </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="btnsubmit">Add new Flight</button>
+                <button type="button" class="btn btn-default" id="btnclose" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>

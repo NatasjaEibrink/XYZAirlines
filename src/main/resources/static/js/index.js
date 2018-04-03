@@ -1,27 +1,28 @@
-
-var baseUrl = "http://localhost:8080/api/"
-
 $(document).ready(function() {
      console.log("Ready ... page loaded");
 
-     $("#addButton").click(function() {
+        $('#modalButton').click(modalToggle);
 
+        function modalToggle (){
+        $('#addFlightModal').modal('toggle');
+        }
+
+        $("#btnsubmit").click(function(){
             var jsonObject = {
-                flightNumber: $("#flightNumber").val(),
-                currentDestination: $("#currentDestination").val(),
-                fuelLevel: Number($("#fuelLevel").val())
+                flightNumber: Number($("#flightNumber").val()),
+                currentDestination: Number($("#currentDestination").val()),
+                fuelLevel: Number($("#fuelLevel").val()),
             };
-             $.ajax({
-                    contentType : "application/json",
-                     // waar moet hij de request op uitvoeren
-                     url : baseUrl+"airplanes",
-                     // type actie
-                     type : "post",
-                     data: JSON.stringify(jsonObject),
-                     // als de actie lukt, voer deze functie uit
-                     success: function(data){ // so the data is the bulb of the response of the Spring Boot REST controller
-                          console.log(data);
-                     }
-                 });
-          });
-});
+            $.ajax({
+                contentType: "application/json",
+                url: baseUrl+"airplanes",
+                type: "post",
+                data: JSON.stringify(jsonObject),
+                succes: function(data){
+                    console.log(data);
+                }
+            });
+            updateTable();
+            modalToggle();
+        });
+    });

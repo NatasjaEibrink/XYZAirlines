@@ -1,11 +1,23 @@
 package nl.yacht.XYZAirlines.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import nl.yacht.XYZAirlines.model.Airplane;
+import nl.yacht.XYZAirlines.repository.AirplaneRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("api/airplane")
+@RequestMapping("api/airplanes")
 public class AirplaneController {
+
+    @Autowired
+    private AirplaneRepository airplaneRepository;
+
+    @GetMapping
+    public Iterable<Airplane> findAll(){
+
+        Iterable<Airplane> airplanes = this.airplaneRepository.findAll();
+        return airplanes;
+    }
 
 
 }

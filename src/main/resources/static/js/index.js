@@ -1,3 +1,5 @@
+var baseUrl = "http://localhost:8080/api/"
+
 $(document).ready(function() {
      console.log("Ready ... page loaded");
 

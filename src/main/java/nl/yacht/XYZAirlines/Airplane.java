@@ -13,10 +13,9 @@ public class Airplane {
     private int fuelLevel;
 
 
-
     // No arg constructor
     public Airplane(){ }
-    
+
     //Constructor
     public Airplane(long id, String flightNumber, String origin, String destination, int fuelLevel) {
         this.id = id;

@@ -1,6 +1,8 @@
 package nl.yacht.XYZAirlines.model;
 
-public class Airplane {
+import java.io.Serializable;
+
+public class Airplane implements Serializable {
 
     private long id;
 

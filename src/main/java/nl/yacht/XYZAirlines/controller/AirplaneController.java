@@ -19,5 +19,15 @@ public class AirplaneController {
         return airplanes;
     }
 
+    @PutMapping(value = "{id}")
+    public Airplane update (@PathVariable long id, @RequestBody Airplane input){
 
+        return this.airplaneRepository.update(id, input);
+    }
+
+    @PostMapping(value="{id}")
+    public Airplane save (@RequestBody Airplane airplane){
+
+        return this.airplaneRepository.save(airplane);
+    }
 }

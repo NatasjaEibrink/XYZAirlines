@@ -1,4 +1,4 @@
-package nl.yacht.XYZAirlines;
+package nl.yacht.XYZAirlines.model;
 
 public class Airplane {
 

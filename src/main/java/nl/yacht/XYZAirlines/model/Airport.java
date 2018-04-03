@@ -1,4 +1,6 @@
-package nl.yacht.XYZAirlines;
+package nl.yacht.XYZAirlines.model;
+
+import nl.yacht.XYZAirlines.model.Airplane;
 
 import java.util.List;
 

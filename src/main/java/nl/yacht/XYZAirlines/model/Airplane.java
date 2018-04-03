@@ -8,7 +8,7 @@ public class Airplane implements Serializable {
 
     private String flightNumber;
 
-    private String origin;
+    private String currentDestination;
 
     private String destination;
 
@@ -19,15 +19,19 @@ public class Airplane implements Serializable {
     public Airplane(){ }
 
     //Constructor
-    public Airplane(long id, String flightNumber, String origin, String destination, int fuelLevel) {
+
+    public Airplane(long id, String flightNumber, String currentDestination, String destination, int fuelLevel) {
         this.id = id;
         this.flightNumber = flightNumber;
-        this.origin = origin;
+        this.currentDestination = currentDestination;
         this.destination = destination;
         this.fuelLevel = fuelLevel;
     }
 
+
     // Region of getters and setters
+
+
     public long getId() {
         return id;
     }
@@ -44,12 +48,12 @@ public class Airplane implements Serializable {
         this.flightNumber = flightNumber;
     }
 
-    public String getOrigin() {
-        return origin;
+    public String getCurrentDestination() {
+        return currentDestination;
     }
 
-    public void setOrigin(String origin) {
-        this.origin = origin;
+    public void setCurrentDestination(String currentDestination) {
+        this.currentDestination = currentDestination;
     }
 
     public String getDestination() {
@@ -67,6 +71,4 @@ public class Airplane implements Serializable {
     public void setFuelLevel(int fuelLevel) {
         this.fuelLevel = fuelLevel;
     }
-
-
 }
